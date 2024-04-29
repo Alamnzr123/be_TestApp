@@ -5,9 +5,8 @@ const { generateToken } = require("../middleware/auth")
 const getHoroscope = require("../helper/horoscope")
 const getChineseZodiac = require("../helper/zodiac")
 
-class ControllerUser {
-
-    static async register(req, res, next) {
+const ControllerUser = {
+    register: async (req, res, next) => {
         try {
             const { db } = mongoDBConnection
             const { username, email, password, password2 } = req.body
@@ -38,9 +37,9 @@ class ControllerUser {
         } catch (error) {
             next(error)
         }
-    }
+    },
 
-    static async login(req, res, next) {
+    login: async (req, res, next) => {
         try {
             const { db } = mongoDBConnection
 
@@ -74,9 +73,9 @@ class ControllerUser {
         } catch (error) {
             next(error)
         }
-    }
+    },
 
-    static async createProfile(req, res, next) {
+    createProfile: async (req, res, next) => {
         try {
             const { db } = mongoDBConnection
             const { id } = req.user
@@ -109,9 +108,9 @@ class ControllerUser {
         } catch (error) {
             next(error)
         }
-    }
+    },
 
-    static async getProfile(req, res, next) {
+    getProfile: async (req, res, next) => {
         try {
             const { db } = mongoDBConnection
             const data = await db.collection('profiles')
@@ -124,9 +123,9 @@ class ControllerUser {
         } catch (error) {
             next(error)
         }
-    }
+    },
 
-    static async updateProfile(req, res, next) {
+    updateProfile: async (req, res, next) => {
         try {
             const { db } = mongoDBConnection
 

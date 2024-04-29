@@ -1,7 +1,7 @@
 function getChineseZodiac(birthdate) {
     const date = new Date(birthdate);
     const birthYear = date.getFullYear()
-    const startYear = 1900; // Start year of the Chinese zodiac cycle
+    const startYear = 1900;
     const animalSigns = [
         "Rat",
         "Ox",

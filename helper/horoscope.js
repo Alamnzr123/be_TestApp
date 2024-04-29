@@ -1,6 +1,6 @@
 function getHoroscope(birthdate) {
     const date = new Date(birthdate);
-    const month = date.getMonth() + 1; // Adding 1 since months are zero-based
+    const month = date.getMonth() + 1;
     const day = date.getDate();
 
     if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {

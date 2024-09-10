@@ -10,7 +10,9 @@
 
 # Description
 
-Backend for Account
+To run Application you need install Backend and Frontend side, which is Mandatory
+This repo include Backend that buid using NodeJS. For Frontend clone this Repo
+**https://github.com/Alamnzr123/fe_TestApp**
 
 # Installation
 
